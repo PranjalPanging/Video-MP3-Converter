@@ -5,7 +5,7 @@ A web app that lets users upload video files and extract audio as MP3. Built wit
 
 ### 1. Clone the repository
 ```
-git clone https://github.com/your-username/video-to-audio.git
+git clone https://github.com/PranjalPanging/Video-MP3-Converter.git
 cd video-to-audio
 ```
 ### 2. Create and activate a virtual environment
