@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video → MP3 Converter</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+
+  <header class="bg-gray-800 p-4 shadow-md">
+    <div class="container mx-auto text-center">
+      <h1 class="text-xl font-bold">Video → MP3 Converter</h1>
+    </div>
+  </header>
+  <main class="flex-grow flex items-center justify-center p-6">
+    <div class="bg-gray-800 p-8 rounded-2xl w-full max-w-lg shadow-lg">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Upload video to extract audio (MP3)</h2>
+
+      <input id="fileInput" type="file" accept="video/*" class="block w-full mb-4 p-2 rounded-md bg-gray-700 border border-gray-600" />
+
+      <button id="proceedBtn" class="w-full bg-indigo-600 py-2 rounded-md hover:bg-indigo-500 transition mb-2">Proceed</button>
+      <button id="downloadBtn" class="w-full bg-green-600 py-2 rounded-md hover:bg-green-500 transition hidden">Download</button>
+
+      <div id="status" class="mt-4 text-gray-300 text-center"></div>
+    </div>
+  </main>
+  <footer class="bg-gray-800 p-4 mt-auto">
+    <div class="container mx-auto text-center text-gray-400 text-sm">
+      &copy; 2025 Video → MP3 Converter. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
