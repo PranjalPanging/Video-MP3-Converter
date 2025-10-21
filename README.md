@@ -1,7 +1,6 @@
 # Video-MP3-Converter
 A web app that lets users upload video files and extract audio as MP3. Built with Flask, Tailwind CSS, and JavaScript, it provides a clean, responsive interface for safe, local video-to-audio conversion.
-# Video-MP3-Converter
-A web app that lets users upload video files and extract audio as MP3. Built with Flask, Tailwind CSS, and JavaScript, it provides a clean, responsive interface for safe, local video-to-audio conversion.
+
 ## 🛠️ Installation
 
 ### 1. Clone the repository
@@ -66,9 +65,7 @@ http://127.0.0.1:5000
 
 ### 7. Tech Stack
 <li>Backend: Flask</li>
-
 <li>Frontend: Html, Tailwind CSS, JavaScript</li>
-
 <li>Audio Processing: FFmpeg</li>
 
 ### 8. Contributing
