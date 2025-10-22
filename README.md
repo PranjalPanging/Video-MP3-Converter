@@ -12,11 +12,11 @@ cd video-to-audio
 ```
 python -m venv venv
 ```
-##### On Windows
+##### 2.1 On Windows
 ```
 venv\Scripts\activate
 ```
-##### On macOS/Linux
+##### 2.2 On macOS/Linux
 ```
 source venv/bin/activate
 ```
@@ -29,19 +29,19 @@ pip install -r requirements.txt
 
 FFmpeg is required for audio extraction.
 
-#### Windows
+#### 4.1 Windows
 
 <li> Download from https://ffmpeg.org/download.html </li>
 
 <li>Extract it and add the bin folder to your PATH environment variable.</li>
 
-#### macOS
+#### 4.2 macOS
 
 ```
 brew install ffmpeg
 
 ```
-#### Linux (Ubuntu/Debian)
+#### 4.3 Linux (Ubuntu/Debian)
 ```
 sudo apt update
 sudo apt install ffmpeg
