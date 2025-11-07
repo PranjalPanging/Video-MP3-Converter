@@ -6,28 +6,43 @@
   <title>Video → MP3 Converter</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
 
-  <header class="bg-gray-800 p-4 shadow-md">
+  <header class="bg-blue-600 text-gray-900 p-4 shadow-md">
     <div class="container mx-auto text-center">
-      <h1 class="text-xl font-bold">Video → MP3 Converter</h1>
+      <h1 class="text-2xl font-bold tracking-wide">Video → MP3 Converter</h1>
+      <p class="text-sm mt-1">Fast & simple audio extraction</p>
     </div>
   </header>
+
   <main class="flex-grow flex items-center justify-center p-6">
-    <div class="bg-gray-800 p-8 rounded-2xl w-full max-w-lg shadow-lg">
+    <div class="bg-white p-8 rounded-2xl w-full max-w-lg shadow-lg">
       <h2 class="text-2xl font-semibold mb-4 text-center">Upload video to extract audio (MP3)</h2>
 
-      <input id="fileInput" type="file" accept="video/*" class="block w-full mb-4 p-2 rounded-md bg-gray-700 border border-gray-600" />
+      <input id="fileInput" type="file" accept="video/*" class="block w-full mb-4 p-2 rounded-md bg-gray-100 border border-gray-300" />
 
-      <button id="proceedBtn" class="w-full bg-indigo-600 py-2 rounded-md hover:bg-indigo-500 transition mb-2">Proceed</button>
-      <button id="downloadBtn" class="w-full bg-green-600 py-2 rounded-md hover:bg-green-500 transition hidden">Download</button>
+      <button id="proceedBtn" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-500 transition mb-2">Proceed</button>
+      <button id="downloadBtn" class="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-500 transition hidden">Download</button>
 
-      <div id="status" class="mt-4 text-gray-300 text-center"></div>
+      <div id="status" class="mt-4 text-gray-600 text-center"></div>
     </div>
   </main>
-  <footer class="bg-gray-800 p-4 mt-auto">
-    <div class="container mx-auto text-center text-gray-400 text-sm">
-      &copy; 2025 Video → MP3 Converter. All rights reserved.
+
+  <footer class="bg-gray-100 text-white-900 p-6 mt-auto shadow-inner">
+    <div class="container mx-auto text-center">
+      <p class="mb-2">&copy; 2025 Video → MP3 Converter</p>
+      <div class="flex justify-center space-x-6 mb-2">
+        <a href="https://github.com/PranjalPanging" target="_blank">
+          <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="h-5 w-5 hover:scale-110 transition">
+        </a>
+        <a href="https://www.linkedin.com/in/pranjalpanging/" target="_blank">
+          <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn" class="h-5 w-5 hover:scale-110 transition">
+        </a>
+        <a href="https://www.instagram.com/pangnosis/" target="_blank">
+          <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram" class="h-5 w-5 hover:scale-110 transition">
+        </a>
+      </div>
+      <p class="text-xs text-gray-500">All rights reserved.</p>
     </div>
   </footer>
 
