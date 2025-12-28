@@ -40,7 +40,7 @@ You must have **FFmpeg** installed on your system for this app to work:
 ### 2. Clone and Setup
 ```bash
 # Clone the repository
-git clone [https://github.com/PranjalPanging/Video-MP3-Converter.git](https://github.com/PranjalPanging/Video-MP3-Converter.git)
+git clone https://github.com/PranjalPanging/Video-MP3-Converter.git
 cd Video-MP3-Converter
 
 # Create a virtual environment
