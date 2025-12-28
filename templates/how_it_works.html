@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it Works | AudioExtract</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 min-h-screen font-sans">
+
+    <nav class="bg-white border-b border-slate-200 py-4">
+        <div class="max-w-5xl mx-auto px-6 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 group">
+                <div class="bg-indigo-600 p-1.5 rounded-lg group-hover:bg-indigo-700 transition-colors">
+                    <i data-lucide="layers" class="text-white w-5 h-5"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">AudioExtract</span>
+            </a>
+            <a href="/" class="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors flex items-center gap-1">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Converter
+            </a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Simple, Secure, and Fast</h1>
+            <p class="text-lg text-slate-600">Understand the technology behind our audio extraction process.</p>
+        </div>
+
+        <div class="grid gap-12">
+            <div class="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                <div class="bg-indigo-100 p-6 rounded-2xl">
+                    <i data-lucide="upload" class="w-10 h-10 text-indigo-600"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">1. Upload your Video</h2>
+                    <p class="text-slate-600 leading-relaxed">Select any video file (MP4, MKV, MOV) up to 200MB. Your file is temporarily stored in a secure system folder and is never shared with third parties.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                <div class="bg-amber-100 p-6 rounded-2xl">
+                    <i data-lucide="cpu" class="w-10 h-10 text-amber-600"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">2. Local FFmpeg Processing</h2>
+                    <p class="text-slate-600 leading-relaxed">Our server uses <strong>FFmpeg</strong>, the world's leading multimedia framework, to strip the video data and encode the audio stream directly into a high-quality MP3 file.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                <div class="bg-emerald-100 p-6 rounded-2xl">
+                    <i data-lucide="download" class="w-10 h-10 text-emerald-600"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">3. Download & Auto-Cleanup</h2>
+                    <p class="text-slate-600 leading-relaxed">Once the conversion is complete, you can download your MP3. To ensure your privacy, <strong>all temporary files are immediately deleted</strong> from our server after the process finishes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-20 text-center">
+            <a href="/" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-indigo-600 transition-all shadow-xl">
+                Try it now <i data-lucide="zap" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
