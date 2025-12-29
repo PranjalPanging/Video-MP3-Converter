@@ -40,7 +40,6 @@ def convert():
     if video.filename == '':
         return "Empty filename", 400
 
-    # Create temp files
     suffix = os.path.splitext(video.filename)[1]
     input_tmp = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
     input_path = input_tmp.name
