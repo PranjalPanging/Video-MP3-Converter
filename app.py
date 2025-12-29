@@ -7,7 +7,6 @@ from flask import Flask, request, send_file, render_template
 app = Flask(__name__, static_folder='static', template_folder='templates')
 app.config['MAX_CONTENT_LENGTH'] = 200 * 1024 * 1024
 
-# --- 1. SETUP FFmpeg PATH ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Adjust this string if your bin folder is named differently!
 LOCAL_FFMPEG = os.path.join(BASE_DIR, 'ffmpeg', 'bin', 'ffmpeg.exe')
@@ -46,12 +45,12 @@ def convert():
     suffix = os.path.splitext(video.filename)[1]
     input_tmp = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
     input_path = input_tmp.name
-    input_tmp.close() # Close so Windows can read it
+    input_tmp.close()
     video.save(input_path)
 
     output_tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.mp3')
     output_path = output_tmp.name
-    output_tmp.close() # Close so FFmpeg can write to it
+    output_tmp.close()
 
     try:
         cmd = [
@@ -64,7 +63,6 @@ def convert():
             output_path
         ]
 
-        # Use shell=True for Windows to avoid 'File Not Found' errors
         proc = subprocess.run(
             cmd, 
             stdout=subprocess.PIPE, 
@@ -83,7 +81,6 @@ def convert():
             download_name=os.path.splitext(video.filename)[0] + '.mp3'
         )
     finally:
-        # Cleanup
         for path in [input_path, output_path]:
             try:
                 if os.path.exists(path):
@@ -91,7 +88,6 @@ def convert():
             except:
                 pass
 
-# --- 2. START THE SERVER ---
 if __name__ == '__main__':
     print("Starting Flask server...")
     app.run(debug=True, host='0.0.0.0', port=5000)
