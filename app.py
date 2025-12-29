@@ -8,7 +8,6 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 app.config['MAX_CONTENT_LENGTH'] = 200 * 1024 * 1024
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# Adjust this string if your bin folder is named differently!
 LOCAL_FFMPEG = os.path.join(BASE_DIR, 'ffmpeg', 'bin', 'ffmpeg.exe')
 
 print(f"--- DEBUG INFO ---")
